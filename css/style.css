@@ -393,14 +393,14 @@ nav a.active {
 ===================================================== */
 
 .hero-image {
-    width: 190px;
+    width: 300px;
     align-self: center;
     justify-self: center;
 }
 
 .avatar-box {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     overflow: hidden;
     background: #f1f1f1;
