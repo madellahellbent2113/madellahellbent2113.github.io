@@ -1,448 +1,104 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-body {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-    color: #1f2933;
-    background: #ffffff;
-
-    line-height: 1.7;
-}
-
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-
 /* =========================
-   Navigation
+   Avatar
 ========================= */
 
-.navbar {
-    height: 76px;
-
-    border-bottom: 1px solid #eeeeee;
-
-    background: rgba(255, 255, 255, 0.95);
-
-    position: sticky;
-    top: 0;
-
-    z-index: 100;
-}
-
-
-.nav-container {
-    width: 90%;
-    max-width: 1100px;
-
-    height: 100%;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-.logo {
-    font-size: 17px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-}
-
-
-nav {
-    display: flex;
-
-    gap: 32px;
-}
-
-
-nav a {
-    font-size: 14px;
-
-    color: #666;
-
-    transition: 0.2s;
-}
-
-
-nav a:hover,
-nav a.active {
-    color: #111;
-}
-
-
-/* =========================
-   Hero
-========================= */
-
-.hero {
-    padding: 120px 0 130px;
-}
-
-
-.hero-container {
-    width: 90%;
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 80px;
-}
-
-
-.hero-text {
-    max-width: 680px;
-}
-
-
-.eyebrow {
-    font-size: 13px;
-
-    letter-spacing: 2px;
-
-    color: #777;
-
-    margin-bottom: 20px;
-}
-
-
-.hero h1 {
-    font-size: 64px;
-
-    line-height: 1.1;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 20px;
-}
-
-
-.hero h2 {
-    font-size: 26px;
-
-    font-weight: 400;
-
-    color: #555;
-
-    margin-bottom: 25px;
-}
-
-
-.hero-description {
-    max-width: 600px;
-
-    font-size: 18px;
-
-    color: #666;
-
-    margin-bottom: 35px;
-}
-
-
-/* Buttons */
-
-.hero-buttons {
-    display: flex;
-
-    gap: 15px;
-}
-
-
-.button {
-    display: inline-block;
-
-    padding: 12px 25px;
-
-    border-radius: 5px;
-
-    font-size: 14px;
-
-    transition: 0.2s;
-}
-
-
-.button.primary {
-    background: #111;
-
-    color: white;
-}
-
-
-.button.primary:hover {
-    background: #333;
-}
-
-
-.button.secondary {
-    border: 1px solid #ddd;
-
-    color: #333;
-}
-
-
-.button.secondary:hover {
-    background: #f5f5f5;
-}
-
-
-/* Avatar */
-
-.hero-image {
-    flex-shrink: 0;
-}
-
-
-.avatar-placeholder {
+.avatar {
     width: 230px;
     height: 230px;
 
+    object-fit: cover;
+
     border-radius: 50%;
 
-    background: #f0f0f0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 60px;
-
-    font-weight: 600;
-
-    color: #777;
+    display: block;
 }
 
 
 /* =========================
-   Sections
+   Timeline
 ========================= */
 
-.section {
-    padding: 100px 0;
+.timeline-item {
+    display: flex;
+
+    gap: 50px;
+
+    padding: 30px 0;
+
+    border-top: 1px solid #eeeeee;
 }
 
 
-.section-gray {
-    background: #f7f7f7;
-}
-
-
-.section-label {
-    font-size: 12px;
-
-    letter-spacing: 2px;
+.timeline-date {
+    min-width: 130px;
 
     color: #888;
 
-    margin-bottom: 12px;
+    font-size: 14px;
 }
 
 
-.section-title {
-    font-size: 36px;
+.timeline-content h3 {
+    font-size: 22px;
 
-    line-height: 1.2;
-
-    margin-bottom: 45px;
+    margin-bottom: 8px;
 }
 
 
-.about-content {
-    max-width: 760px;
+.timeline-content p {
+    color: #666;
 
-    font-size: 18px;
-
-    color: #555;
-}
-
-
-.about-content p {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 
 /* =========================
-   Research
+   Publication Role
 ========================= */
 
-.research-grid {
+.publication-role {
+    color: #555 !important;
+
+    font-size: 13px !important;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   Achievement
+========================= */
+
+.achievement-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(2, 1fr);
 
     gap: 25px;
 }
 
 
-.research-card {
-    background: white;
-
-    padding: 35px;
-
-    min-height: 240px;
+.achievement-card {
+    padding: 30px;
 
     border: 1px solid #eeeeee;
 
-    transition: 0.2s;
+    background: white;
 }
 
 
-.research-card:hover {
-    transform: translateY(-4px);
+.achievement-card h3 {
+    font-size: 20px;
 
-    border-color: #cccccc;
+    margin-bottom: 12px;
 }
 
 
-.research-number {
-    font-size: 13px;
-
-    color: #999;
-}
-
-
-.research-card h3 {
-    font-size: 22px;
-
-    margin: 25px 0 15px;
-}
-
-
-.research-card p {
+.achievement-card p {
     color: #666;
 
     font-size: 15px;
-}
-
-
-/* =========================
-   Publications
-========================= */
-
-.publication {
-    display: flex;
-
-    gap: 35px;
-
-    padding: 30px 0;
-
-    border-bottom: 1px solid #eeeeee;
-}
-
-
-.publication-year {
-    color: #888;
-
-    font-size: 14px;
-
-    min-width: 50px;
-}
-
-
-.publication h3 {
-    font-size: 18px;
-
-    margin-bottom: 7px;
-}
-
-
-.publication p {
-    color: #777;
-
-    font-size: 14px;
-}
-
-
-.text-link {
-    display: inline-block;
-
-    margin-top: 30px;
-
-    font-size: 14px;
-
-    border-bottom: 1px solid #111;
-}
-
-
-/* =========================
-   Contact
-========================= */
-
-.contact-section {
-    background: #f7f7f7;
-}
-
-
-.contact-section > .container > p:not(.section-label) {
-    color: #666;
-
-    max-width: 600px;
-}
-
-
-.contact-links {
-    display: flex;
-
-    gap: 30px;
-
-    margin-top: 25px;
-}
-
-
-.contact-links a {
-    font-size: 14px;
-
-    border-bottom: 1px solid #999;
-}
-
-
-/* =========================
-   Footer
-========================= */
-
-footer {
-    padding: 35px 0;
-
-    border-top: 1px solid #eeeeee;
-
-    color: #888;
-
-    font-size: 13px;
 }
 
 
@@ -452,55 +108,21 @@ footer {
 
 @media (max-width: 768px) {
 
-    nav {
-        gap: 15px;
+    .timeline-item {
+        flex-direction: column;
+
+        gap: 10px;
     }
 
 
-    nav a {
-        font-size: 12px;
-    }
-
-
-    .hero {
-        padding: 80px 0;
-    }
-
-
-    .hero-container {
-        flex-direction: column-reverse;
-
-        align-items: flex-start;
-
-        gap: 40px;
-    }
-
-
-    .hero h1 {
-        font-size: 46px;
-    }
-
-
-    .hero h2 {
-        font-size: 22px;
-    }
-
-
-    .avatar-placeholder {
-        width: 170px;
-        height: 170px;
-
-        font-size: 45px;
-    }
-
-
-    .research-grid {
+    .achievement-grid {
         grid-template-columns: 1fr;
     }
 
 
-    .section {
-        padding: 70px 0;
+    .avatar {
+        width: 180px;
+        height: 180px;
     }
 
 }
