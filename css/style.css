@@ -281,3 +281,62 @@
     }
 
 }
+
+/* =========================
+   Projects
+========================= */
+
+.project {
+    display: flex;
+
+    gap: 35px;
+
+    padding: 45px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.project-number {
+    min-width: 40px;
+
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+.project h2 {
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+
+.project p {
+    max-width: 750px;
+
+    color: #666;
+
+    font-size: 16px;
+
+    margin-bottom: 15px;
+}
+
+
+.project-tech {
+    color: #777;
+
+    font-size: 13px;
+
+    letter-spacing: 0.3px;
+}
+
+
+@media (max-width: 768px) {
+
+    .project {
+        gap: 15px;
+    }
+
+}
