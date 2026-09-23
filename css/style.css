@@ -818,12 +818,17 @@ footer {
     }
 
    .avatar-box {
-       width: 160px;
-       height: 160px;
+       width: 165px;
+       height: 165px;
+   }
+   
+   .avatar-box img {
+       width: 175px;
+       height: 175px;
    }
    
    .avatar-caption {
-       width: 160px;
+       width: 165px;
    }
 
     .hero-bottom {
