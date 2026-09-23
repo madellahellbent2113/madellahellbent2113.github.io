@@ -391,59 +391,94 @@ nav a.active {
 /* =====================================================
    AVATAR
 ===================================================== */
+/* =====================================================
+   AVATAR
+===================================================== */
+
 .hero-image {
     width: 200px;
     align-self: center;
     justify-self: center;
-    position: relative;
 }
 
 
-/* 背景圆 */
-.avatar-box {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: #f1f1f1;
-    border: 1px solid #e2e2e2;
+/* 头像整体区域 */
+.avatar-wrap {
+    width: 190px;
+    height: 190px;
     position: relative;
     margin: 0 auto;
 }
 
 
-/* 照片 */
-.avatar-box img {
+/* 后面的浅灰色背景圆 */
+.avatar-bg {
     position: absolute;
-    width: 190px;
-    height: 190px;
+
+    width: 180px;
+    height: 180px;
+
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
+
     border-radius: 50%;
+
+    background: #f1f1f1;
+
+    border: 1px solid #e2e2e2;
+}
+
+
+/* 真正的照片 */
+.avatar-photo {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
     object-fit: cover;
+
     display: block;
+
     transition: transform 0.4s ease;
 }
 
 
 /* 鼠标悬停 */
-.avatar-box:hover img {
-    transform: translate(-50%, -50%) scale(1.04);
+.avatar-wrap:hover .avatar-photo {
+    transform: translate(-50%, -50%) scale(1.03);
 }
+
 
 /* 照片下面的文字 */
 .avatar-caption {
     width: 180px;
+
     margin: 15px auto 0;
+
     padding-top: 12px;
+
     border-top: 1px solid #e5e5e5;
+
     display: flex;
+
     justify-content: space-between;
+
     font-size: 9px;
+
     letter-spacing: 1.3px;
+
     color: #999;
 }
-
 
 /* Hero bottom */
 
@@ -817,12 +852,17 @@ footer {
         font-size: 16px;
     }
 
-   .avatar-box {
+   .avatar-wrap {
+       width: 175px;
+       height: 175px;
+   }
+   
+   .avatar-bg {
        width: 165px;
        height: 165px;
    }
    
-   .avatar-box img {
+   .avatar-photo {
        width: 175px;
        height: 175px;
    }
