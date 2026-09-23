@@ -1,14 +1,21 @@
+/* =====================================================
+   RESET
+===================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
+
     font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -17,10 +24,13 @@ body {
         sans-serif;
 
     color: #1f2933;
+
     background: #ffffff;
 
     line-height: 1.7;
+
 }
+
 
 a {
     text-decoration: none;
@@ -28,36 +38,14 @@ a {
 }
 
 
-/* =====================================================
-   GLOBAL
-===================================================== */
-
 .container {
+
     width: 90%;
+
     max-width: 1100px;
+
     margin: 0 auto;
-}
 
-.section {
-    padding: 105px 0;
-}
-
-.section-gray {
-    background: #f7f7f7;
-}
-
-.section-label {
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #888;
-    margin-bottom: 12px;
-}
-
-.section-title {
-    font-size: 36px;
-    line-height: 1.2;
-    margin-bottom: 45px;
-    font-weight: 600;
 }
 
 
@@ -66,22 +54,26 @@ a {
 ===================================================== */
 
 .navbar {
+
     height: 76px;
 
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e5e7eb;
 
     background: rgba(255, 255, 255, 0.96);
 
     position: sticky;
+
     top: 0;
 
     z-index: 100;
 
-    backdrop-filter: blur(10px);
 }
 
+
 .nav-container {
+
     width: 90%;
+
     max-width: 1100px;
 
     height: 100%;
@@ -89,34 +81,42 @@ a {
     margin: auto;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
 }
 
+
 .logo {
+
     font-size: 17px;
 
     font-weight: 700;
 
     letter-spacing: 1px;
+
 }
 
+
 nav {
+
     display: flex;
 
     height: 100%;
 
-    align-items: center;
-
-    gap: 0;
 }
 
+
 nav a {
+
     height: 100%;
 
     padding: 0 18px;
 
     display: flex;
+
     align-items: center;
 
     font-size: 14px;
@@ -125,30 +125,36 @@ nav a {
 
     border-left: 1px solid transparent;
 
-    transition:
-        color 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
+    border-right: 1px solid transparent;
+
+    transition: 0.2s;
+
 }
+
 
 nav a:hover {
+
     color: #111;
 
     background: #fafafa;
 
     border-left-color: #eeeeee;
+
+    border-right-color: #eeeeee;
+
 }
+
 
 nav a.active {
+
     color: #111;
 
     background: #fafafa;
 
     border-left-color: #eeeeee;
-}
 
-nav a:last-child {
-    border-right: 1px solid #eeeeee;
+    border-right-color: #eeeeee;
+
 }
 
 
@@ -157,31 +163,93 @@ nav a:last-child {
 ===================================================== */
 
 .hero {
-    padding: 120px 0 130px;
 
-    border-bottom: 1px solid #eeeeee;
+    padding: 90px 0 0;
+
 }
 
+
 .hero-container {
+
     width: 90%;
+
     max-width: 1100px;
 
     margin: auto;
 
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 280px;
+    grid-template-columns: 55px 1fr;
 
-    gap: 80px;
+    border-left: 1px solid #e5e7eb;
+
+    border-right: 1px solid #e5e7eb;
+
+}
+
+
+/* 左边编号栏 */
+
+.hero-side {
+
+    border-right: 1px solid #e5e7eb;
+
+    padding: 25px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    color: #999;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.hero-side span:last-child {
+
+    writing-mode: vertical-rl;
+
+    transform: rotate(180deg);
+
+}
+
+
+/* Hero 主体 */
+
+.hero-main {
+
+    min-height: 570px;
+
+    padding: 70px 65px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 260px;
+
+    gap: 70px;
 
     align-items: center;
+
 }
+
+
+/* Hero文字 */
 
 .hero-text {
+
     max-width: 680px;
+
 }
 
+
 .eyebrow {
+
     font-size: 12px;
 
     letter-spacing: 2px;
@@ -189,21 +257,27 @@ nav a:last-child {
     color: #777;
 
     margin-bottom: 20px;
+
 }
 
+
 .hero h1 {
+
     font-size: 64px;
 
     line-height: 1.1;
 
-    letter-spacing: -2.5px;
+    letter-spacing: -2px;
 
     margin-bottom: 20px;
 
-    font-weight: 700;
+    font-weight: 650;
+
 }
 
+
 .hero h2 {
+
     font-size: 26px;
 
     font-weight: 400;
@@ -211,9 +285,12 @@ nav a:last-child {
     color: #555;
 
     margin-bottom: 25px;
+
 }
 
+
 .hero-description {
+
     max-width: 600px;
 
     font-size: 18px;
@@ -221,53 +298,65 @@ nav a:last-child {
     color: #666;
 
     margin-bottom: 35px;
+
 }
 
 
-/* =====================================================
-   HERO BUTTONS
-===================================================== */
+/* Buttons */
 
 .hero-buttons {
+
     display: flex;
 
-    gap: 12px;
+    gap: 15px;
+
 }
 
+
 .button {
+
     display: inline-block;
 
-    padding: 11px 23px;
+    padding: 11px 24px;
 
-    border-radius: 5px;
+    border-radius: 4px;
 
     font-size: 14px;
 
-    transition: all 0.2s ease;
+    transition: 0.2s;
+
 }
 
+
 .button.primary {
+
     background: #111;
 
     color: white;
+
 }
+
 
 .button.primary:hover {
+
     background: #333;
 
-    transform: translateY(-1px);
 }
+
 
 .button.secondary {
-    border: 1px solid #ddd;
+
+    border: 1px solid #d8d8d8;
 
     color: #333;
+
 }
 
-.button.secondary:hover {
-    background: #f5f5f5;
 
-    border-color: #bbb;
+.button.secondary:hover {
+
+    background: #f7f7f7;
+
 }
 
 
@@ -276,22 +365,28 @@ nav a:last-child {
 ===================================================== */
 
 .hero-image {
-    flex-shrink: 0;
 
-    position: relative;
+    align-self: center;
+
 }
 
+
 .avatar-placeholder {
-    width: 250px;
-    height: 250px;
+
+    width: 230px;
+
+    height: 230px;
 
     border-radius: 50%;
 
-    background: #f0f0f0;
+    background: #f1f1f1;
+
+    border: 1px solid #e2e2e2;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     font-size: 60px;
@@ -300,17 +395,234 @@ nav a:last-child {
 
     color: #777;
 
-    border: 1px solid #e5e5e5;
+    transition: 0.3s;
 
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease;
 }
 
-.avatar-placeholder:hover {
-    transform: scale(1.02);
 
-    background: #eeeeee;
+.avatar-placeholder:hover {
+
+    background: #e9e9e9;
+
+}
+
+
+.avatar-caption {
+
+    margin-top: 15px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #e5e5e5;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 9px;
+
+    letter-spacing: 1.3px;
+
+    color: #999;
+
+}
+
+
+/* Hero bottom */
+
+.hero-bottom {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    min-height: 75px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 220px 100px;
+
+    border: 1px solid #e5e7eb;
+
+}
+
+
+.hero-bottom > div {
+
+    padding: 16px 20px;
+
+}
+
+
+.hero-bottom > div:not(:last-child) {
+
+    border-right: 1px solid #e5e7eb;
+
+}
+
+
+.hero-bottom span {
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #999;
+
+}
+
+
+.hero-bottom p {
+
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #555;
+
+}
+
+
+.hero-location {
+
+    font-size: 10px;
+
+    color: #777;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.scroll {
+
+    font-size: 9px;
+
+    color: #888;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+.section {
+
+    padding: 100px 0;
+
+}
+
+
+.section-gray {
+
+    background: #f7f7f7;
+
+}
+
+
+.section-container {
+
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    border-left: 1px solid #e5e7eb;
+
+    border-right: 1px solid #e5e7eb;
+
+}
+
+
+.section-side {
+
+    min-height: 100%;
+
+    border-right: 1px solid #e5e7eb;
+
+    padding: 25px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    color: #999;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.section-side span:last-child {
+
+    writing-mode: vertical-rl;
+
+    transform: rotate(180deg);
+
+}
+
+
+.section-content {
+
+    padding: 0 65px;
+
+}
+
+
+/* Section top line */
+
+.section-content::before {
+
+    content: "";
+
+    display: block;
+
+    height: 1px;
+
+    background: #e5e7eb;
+
+    margin-bottom: 35px;
+
+}
+
+
+.section-label {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #888;
+
+    margin-bottom: 10px;
+
+}
+
+
+.section-title {
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    margin-bottom: 45px;
+
+    font-weight: 600;
+
 }
 
 
@@ -319,21 +631,73 @@ nav a:last-child {
 ===================================================== */
 
 .about-content {
-    max-width: 800px;
 
-    padding-top: 5px;
+    display: grid;
 
-    border-left: 2px solid #f0f0f0;
+    grid-template-columns: 1.3fr 0.7fr;
 
-    padding-left: 28px;
+    gap: 90px;
+
+}
+
+
+.about-main {
+
+    max-width: 760px;
 
     font-size: 18px;
 
     color: #555;
+
 }
 
-.about-content p {
+
+.about-main p {
+
     margin-bottom: 20px;
+
+}
+
+
+.about-meta {
+
+    border-top: 1px solid #e5e5e5;
+
+}
+
+
+.meta-item {
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.meta-item span {
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #999;
+
+}
+
+
+.meta-item strong {
+
+    font-size: 14px;
+
+    font-weight: 500;
+
 }
 
 
@@ -342,6 +706,7 @@ nav a:last-child {
 ===================================================== */
 
 .research-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -349,55 +714,100 @@ nav a:last-child {
 
     gap: 0;
 
-    border-top: 1px solid #dddddd;
+    border-top: 1px solid #e0e0e0;
 
-    border-left: 1px solid #dddddd;
+    border-left: 1px solid #e0e0e0;
+
 }
+
 
 .research-card {
+
     background: white;
 
-    padding: 35px;
+    padding: 30px;
 
-    min-height: 240px;
+    min-height: 250px;
 
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #e0e0e0;
 
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #e0e0e0;
 
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.25s;
+
 }
+
 
 .research-card:hover {
-    background: #fafafa;
 
-    transform: translateY(-3px);
+    background: #fcfcfc;
+
 }
 
+
+.card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
 .research-number {
+
     font-size: 12px;
 
     color: #999;
 
-    letter-spacing: 1px;
 }
 
+
+.card-arrow {
+
+    font-size: 18px;
+
+    color: #aaa;
+
+    transition: 0.2s;
+
+}
+
+
+.research-card:hover .card-arrow {
+
+    transform: translate(3px, -3px);
+
+    color: #333;
+
+}
+
+
 .research-card h3 {
+
     font-size: 22px;
 
     margin: 25px 0 15px;
 
-    font-weight: 600;
 }
 
+
 .research-card p {
+
     color: #666;
 
     font-size: 15px;
 
-    max-width: 270px;
+    max-width: 280px;
+
 }
 
 
@@ -406,72 +816,100 @@ nav a:last-child {
 ===================================================== */
 
 .publication-list {
-    border-top: 1px solid #eeeeee;
+
+    border-top: 1px solid #e5e5e5;
+
 }
 
+
 .publication {
+
     display: grid;
 
-    grid-template-columns: 80px 1fr;
+    grid-template-columns:
+        70px 1fr 120px;
 
     gap: 30px;
 
     padding: 30px 0;
 
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #e5e5e5;
 
-    transition: background 0.2s ease;
+    align-items: center;
+
+    transition: 0.2s;
+
 }
+
 
 .publication:hover {
+
     background: #fafafa;
+
 }
+
 
 .publication-year {
+
     color: #888;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    padding-left: 3px;
 }
 
-.publication h3 {
+
+.publication-main h3 {
+
     font-size: 18px;
 
     margin-bottom: 7px;
 
-    font-weight: 600;
+    font-weight: 500;
+
 }
 
-.publication p {
+
+.publication-main p {
+
     color: #777;
 
     font-size: 14px;
+
 }
 
 
-/* =====================================================
-   TEXT LINK
-===================================================== */
+.publication-type {
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+
+    color: #999;
+
+    text-align: right;
+
+}
+
 
 .text-link {
+
     display: inline-block;
 
     margin-top: 30px;
+
+    padding-bottom: 3px;
 
     font-size: 14px;
 
     border-bottom: 1px solid #111;
 
-    padding-bottom: 2px;
-
-    transition:
-        padding 0.2s ease,
-        color 0.2s ease;
 }
 
-.text-link:hover {
-    padding-right: 7px;
+
+.text-link span {
+
+    margin-left: 8px;
+
 }
 
 
@@ -480,37 +918,60 @@ nav a:last-child {
 ===================================================== */
 
 .contact-section {
+
     background: #f7f7f7;
 
-    border-top: 1px solid #eeeeee;
 }
 
-.contact-section > .container > p:not(.section-label) {
+
+.contact-description {
+
     color: #666;
 
     max-width: 600px;
+
 }
+
 
 .contact-links {
+
+    margin-top: 30px;
+
     display: flex;
 
-    gap: 30px;
+    gap: 0;
 
-    margin-top: 25px;
 }
+
 
 .contact-links a {
+
+    padding: 12px 25px;
+
+    border: 1px solid #dcdcdc;
+
+    background: #fff;
+
     font-size: 14px;
 
-    border-bottom: 1px solid #999;
+    transition: 0.2s;
 
-    padding-bottom: 2px;
-
-    transition: border-color 0.2s ease;
 }
 
+
+.contact-links a + a {
+
+    border-left: none;
+
+}
+
+
 .contact-links a:hover {
-    border-color: #111;
+
+    background: #111;
+
+    color: #fff;
+
 }
 
 
@@ -519,64 +980,39 @@ nav a:last-child {
 ===================================================== */
 
 footer {
+
     padding: 35px 0;
 
     border-top: 1px solid #eeeeee;
 
     color: #888;
 
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   SUBTLE DECORATIVE LINES
-===================================================== */
-
-/*
-   页面左右非常淡的竖线
-   不抢主体，只增加版式感
-*/
-
-@media (min-width: 1100px) {
-
-    .hero::before,
-    .hero::after {
-        content: "";
-
-        position: absolute;
-
-        top: 76px;
-        bottom: 0;
-
-        width: 1px;
-
-        background: #f2f2f2;
-
-        pointer-events: none;
-    }
-
-    .hero {
-        position: relative;
-    }
-
-    .hero::before {
-        left: calc(5% - 20px);
-    }
-
-    .hero::after {
-        right: calc(5% - 20px);
-    }
+    font-size: 12px;
 
 }
 
 
-/* =====================================================
-   SECTION DIVIDERS
-===================================================== */
+.footer-container {
 
-.section + .section {
-    border-top: 1px solid #eeeeee;
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+}
+
+
+.footer-container span:nth-child(2) {
+
+    text-align: center;
+
+}
+
+
+.footer-container span:last-child {
+
+    text-align: right;
+
 }
 
 
@@ -584,117 +1020,202 @@ footer {
    MOBILE
 ===================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+
 
     .navbar {
+
         height: 68px;
+
     }
+
 
     .nav-container {
-        width: 92%;
+
+        width: 90%;
+
     }
+
 
     nav {
-        gap: 4px;
+
+        gap: 0;
+
     }
+
 
     nav a {
-        padding: 0 8px;
+
+        padding: 0 7px;
 
         font-size: 11px;
-    }
 
-    nav a:last-child {
-        border-right: none;
     }
 
 
     .hero {
-        padding: 80px 0 90px;
+
+        padding-top: 60px;
+
     }
 
+
     .hero-container {
-        width: 90%;
+
+        grid-template-columns: 38px 1fr;
+
+    }
+
+
+    .hero-main {
+
+        padding: 55px 25px;
 
         grid-template-columns: 1fr;
 
         gap: 45px;
+
     }
 
-    .hero-image {
-        order: -1;
-    }
 
     .hero h1 {
+
         font-size: 46px;
 
-        letter-spacing: -1.5px;
     }
+
 
     .hero h2 {
-        font-size: 22px;
+
+        font-size: 21px;
+
     }
+
 
     .hero-description {
+
         font-size: 16px;
+
     }
 
+
     .avatar-placeholder {
-        width: 175px;
-        height: 175px;
+
+        width: 180px;
+
+        height: 180px;
 
         font-size: 45px;
+
+    }
+
+
+    .hero-bottom {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero-bottom > div {
+
+        border-right: none !important;
+
+        border-bottom: 1px solid #e5e7eb;
+
+    }
+
+
+    .hero-location,
+    .scroll {
+
+        min-height: 50px;
+
     }
 
 
     .section {
-        padding: 75px 0;
+
+        padding: 70px 0;
+
     }
 
-    .container {
-        width: 90%;
+
+    .section-container {
+
+        grid-template-columns: 38px 1fr;
+
     }
+
+
+    .section-content {
+
+        padding: 0 25px;
+
+    }
+
 
     .section-title {
-        font-size: 32px;
 
-        margin-bottom: 35px;
+        font-size: 30px;
+
     }
 
 
     .about-content {
-        padding-left: 20px;
 
-        font-size: 17px;
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
     }
 
 
     .research-grid {
+
         grid-template-columns: 1fr;
 
-        border-right: 1px solid #dddddd;
     }
 
-    .research-card {
-        min-height: auto;
 
-        padding: 30px;
+    .research-card {
+
+        min-height: 210px;
+
     }
 
 
     .publication {
-        grid-template-columns: 55px 1fr;
+
+        grid-template-columns:
+            55px 1fr;
 
         gap: 15px;
-    }
 
-    .publication h3 {
-        font-size: 16px;
     }
 
 
-    .contact-links {
-        gap: 20px;
+    .publication-type {
+
+        display: none;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .footer-container span:nth-child(2),
+    .footer-container span:last-child {
+
+        text-align: left;
+
     }
 
 }
