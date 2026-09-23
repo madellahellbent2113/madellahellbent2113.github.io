@@ -126,3 +126,63 @@
     }
 
 }
+
+/* =========================
+   Page Header
+========================= */
+
+.page-header {
+    padding: 100px 0 80px;
+
+    background: #f7f7f7;
+}
+
+
+.page-header h1 {
+    font-size: 52px;
+
+    margin-bottom: 20px;
+}
+
+
+.page-header p:not(.section-label) {
+    max-width: 650px;
+
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   Research Detail
+========================= */
+
+.research-detail {
+    max-width: 850px;
+
+    padding: 50px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.research-detail:last-child {
+    border-bottom: none;
+}
+
+
+.research-detail h2 {
+    font-size: 30px;
+
+    margin: 15px 0 20px;
+}
+
+
+.research-detail p {
+    color: #666;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
