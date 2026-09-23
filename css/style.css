@@ -391,37 +391,49 @@ nav a.active {
 /* =====================================================
    AVATAR
 ===================================================== */
-
 .hero-image {
-    width: 300px;
+    width: 200px;
     align-self: center;
     justify-self: center;
+    position: relative;
 }
 
+
+/* 背景圆 */
 .avatar-box {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    overflow: hidden;
     background: #f1f1f1;
     border: 1px solid #e2e2e2;
+    position: relative;
     margin: 0 auto;
 }
 
+
+/* 照片 */
 .avatar-box img {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
 }
 
+
+/* 鼠标悬停 */
 .avatar-box:hover img {
-    transform: scale(1.04);
+    transform: translate(-50%, -50%) scale(1.04);
 }
 
+/* 照片下面的文字 */
 .avatar-caption {
-    width: 170px;
+    width: 180px;
     margin: 15px auto 0;
     padding-top: 12px;
     border-top: 1px solid #e5e5e5;
