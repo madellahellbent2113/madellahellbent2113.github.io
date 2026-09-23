@@ -391,6 +391,7 @@ nav a.active {
 /* =====================================================
    AVATAR
 ===================================================== */
+
 .hero-image {
     width: 190px;
     align-self: center;
@@ -398,7 +399,7 @@ nav a.active {
 }
 
 
-/* 头像整体区域 */
+/* 背景圆 */
 .avatar-wrap {
     width: 180px;
     height: 180px;
@@ -407,7 +408,7 @@ nav a.active {
 }
 
 
-/* 后面的浅灰色背景圆 */
+/* 浅灰色背景圆 */
 .avatar-bg {
     position: absolute;
 
@@ -422,12 +423,11 @@ nav a.active {
     border-radius: 50%;
 
     background: #f1f1f1;
-
     border: 1px solid #e2e2e2;
 }
 
 
-/* 真正的照片 */
+/* 实际照片 */
 .avatar-photo {
     position: absolute;
 
@@ -475,7 +475,6 @@ nav a.active {
 
     color: #999;
 }
-
 /* Hero bottom */
 
 .hero-bottom {
@@ -849,22 +848,22 @@ footer {
     }
 
    .avatar-wrap {
-       width: 175px;
-       height: 175px;
+       width: 170px;
+       height: 170px;
    }
    
    .avatar-bg {
+       width: 160px;
+       height: 160px;
+   }
+   
+   .avatar-photo {
        width: 165px;
        height: 165px;
    }
    
-   .avatar-photo {
-       width: 175px;
-       height: 175px;
-   }
-   
    .avatar-caption {
-       width: 165px;
+       width: 160px;
    }
 
     .hero-bottom {
